@@ -45,7 +45,7 @@ static function getAvionById($id_Avion){
 
 }
 static function getAvionById($id_Avion){
-    $bdd = new PDO('mysql:dbname=lycée;host=127.0.0.1','root', '');
+    $bdd = new PDO('mysql:dbname=compagnie;host=127.0.0.1','root', '');
     $query= $bdd->prepare('UPDATE avion SET >Nombre_Heure_Vol =:>Nombre_Heure_Vol, Id_Type_Avion=:Id_Type_Avion');
     $query->execute(array('id'=>$avion->getId_Avion() ,'Nombre_Heure_Vol'=>$avion->getNombre_Heure_Vol(),'Type_Avion'=>$avion->getId_Type_Avion()));
 }
